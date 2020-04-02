@@ -120,3 +120,5 @@ function sortSchoolsBySentury(schools){
 }; 
 sortSchoolsBySentury(schools);
 console.log(sortedSchools);
+
+////////
