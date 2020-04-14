@@ -65,17 +65,9 @@
         let newClaims = []; 
         
         function getClaims(arr) {
-             claims.map(el =>{ 
-                for (key in el){
-                    if(key == "status" &&  el.status == 'Closed'){
-                        newClaims.push(el);
-                    }
-                }
-                return newClaims 
-            });
+            newClaims = arr.filter((el) => el.status === 'Closed')
         }
         getClaims(claims);
-        console.log("Second answer");
         console.log(newClaims);
 
 
