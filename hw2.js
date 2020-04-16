@@ -6,7 +6,7 @@ for (let i = 0; i<zero.length; i++ ){
 zero[i] = 11 ;}
 }
 
-Кароч я неправильно прочитал задание и перемножил все четные числа)
+////Кароч я неправильно прочитал задание и перемножил все четные числа)
 
 let temp = 0;
 
@@ -17,7 +17,7 @@ for (let i = 0; i <multiply.length; i++){
     }
 }
 
-Вот то что надо:
+//Вот то что надо:
 
  let temp = 0;
 
@@ -28,7 +28,7 @@ for (let i = 0; i <multiply.length; i++){
     }
 }
 
-Вывод с for 
+//Вывод с for 
 
 for(let i = 0; i<second.length; i++){
     if (second[i] % 2 !=0 ){
@@ -36,7 +36,7 @@ for(let i = 0; i<second.length; i++){
     }
 }
 
-Вывод с while
+//Вывод с while
 
 let i = 0 ;
 while (i<second.length){
