@@ -21,11 +21,11 @@
         })
 
         prom1.then((data) => {
-            console.log(data);
+            data;
             console.log('2');
             console.log('3');
                 prom2.then((data2)=>{
-                console.log(data2);
+                data2;
                 console.log('5');
             })
 
@@ -79,9 +79,9 @@
         .then((res) => console.log(res)));
         ////2 variant ////
         async function getData(){
-            const result1 = await fetch('https://playwithpromise.herokuapp.com/api/order-review/last');
+            let result1 = await fetch('https://playwithpromise.herokuapp.com/api/order-review/last');
             result1 = await result1.json();
-            const finalyResult = await fetch (`https://playwithpromise.herokuapp.com/api/order-review/getid/${result1._id}`);
+            let finalyResult = await fetch (`https://playwithpromise.herokuapp.com/api/order-review/getid/${result1._id}`);
             finalyResult = await finalyResult.json();
         }
         
