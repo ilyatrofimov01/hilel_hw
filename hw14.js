@@ -21,11 +21,11 @@
         })
 
         prom1.then((data) => {
-            console.log(data);
+            data;
             console.log('2');
             console.log('3');
                 prom2.then((data2)=>{
-                console.log(data2);
+                data2;
                 console.log('5');
             })
 
