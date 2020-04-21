@@ -32,12 +32,15 @@
   // https://playwithpromise.herokuapp.com/api/order-system/product/{productId}
 
   async function getData(){
-      let result1 = await fetch('https://playwithpromise.herokuapp.com/api/order-review/last');
-      result1 = await result1.json();
-      console.log(result1);
-      let result2 = await fetch (`https://playwithpromise.herokuapp.com/api/order-review/getid/${result1._id}`);
-      result2 = await result2.json();
-      console.log(result2);
-      let result3 = await fetch(`https://playwithpromise.herokuapp.com/api/order-system/product/${result2.orderList[0].productId}`);
-      console.log(result3);
+    let result1 = await fetch('https://playwithpromise.herokuapp.com/api/order-review/last');
+    result1 = await result1.json();
+    console.log(result1);
+    let result2 = await fetch (`https://playwithpromise.herokuapp.com/api/order-review/getid/${result1._id}`);
+    result2 = await result2.json();
+    console.log(result2);
+    let fprod = await fetch(`https://playwithpromise.herokuapp.com/api/order-system/product/${result2.orderList[0].productId}`);
+    fprod = await fprod.json();
+    let sprod = await fetch(`https://playwithpromise.herokuapp.com/api/order-system/product/${result2.orderList[1].productId}`);
+    sprod = await sprod.json();
+    let finalRes = Promise.all([fprod,sprod]).then(data => console.log(data));
   }
