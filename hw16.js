@@ -41,5 +41,3 @@
       let result3 = await fetch(`https://playwithpromise.herokuapp.com/api/order-system/product/${result2.orderList[0].productId}`);
       console.log(result3);
   }
-  
-  
