@@ -29,8 +29,8 @@
                 console.log('5');
             })
 
-        })
-       
+        })      
+
         //3) Есть код !  Нужно всего лишь написать комментарий что делает каждая из строчок!
         const pr2 = new Promise(function (resolve, reject) {//создаем промис
              resolve({id: 2})///при успешном выполнении получаем этот объект
@@ -57,14 +57,10 @@
         })
 
 
-
-
         // 5) Есть роуты!! С помощью fetch
         // https://playwithpromise.herokuapp.com/api/order-review/last - вернет обьект с id такой
         // после чего используя id делаем другой запрос
         // https://playwithpromise.herokuapp.com/api/order-review/getid/{id} 
-
-
         ////1 variant///
         let response = fetch('https://playwithpromise.herokuapp.com/api/order-review/last')
         .then((data)=> data.json())
@@ -78,16 +74,3 @@
             let finalyResult = await fetch (`https://playwithpromise.herokuapp.com/api/order-review/getid/${result1._id}`);
             finalyResult = await finalyResult.json();
         }
-        
-
-
-
-
-
-
-
-
-        
-        
-        
-        
